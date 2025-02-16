@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+body {
+    background: url(assets/assets/weather/ceu-por-do-sol.jpg);
+    width: 100%;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100dvh;
+    background: rgb(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(219, 47, 113);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: pink;
+}
+
+.dados-atuais-txt {
+    font-weight: 400;
+}
+
+.main-container {
+    margin-top: 5rem;
+    width: 300px;
+    height: 496px;
+    z-index: 1;
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.15), rgb(255, 255, 255, 0.15));
+    border-radius: 12px;
+    backdrop-filter: blur(100px);
+    padding: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.cidade-input {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background: rgb(0, 0, 0, 0.15);
+    outline: none;
+    font-weight: 500;
+    transition: 0.25s border;
+    padding-right: 45px;
+}
+
+.cidade-input:focus {
+    border: 3px solid rgb(0, 0, 0, 0.15);
+}
+
+.cidade-input::placeholder {
+    color: rgb(255, 255, 255, 0.75);
+}
+
+.procurar-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    display: flex;
+    border: none;
+    cursor: pointer;
+}
+
+.clima-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.localizacao-data-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.localizacao {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.clima-sumario-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clima-sumario-img {
+    width: 120px;
+    height: 120px;
+}
+
+.clima-sumario-info {
+    text-align: end;
+}
+
+.clima-conditions-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.condition-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.condition-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.previsao-items-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin: 0;
+}
+
+.previsao-items-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.previsao-items-container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 99px;
+    border: none;
+}
+
+.previsao-items-container::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0, 0.15);
+    border-radius: 99px;
+}
+
+.previsao-item {
+    min-width: 70px;
+    background: rgb(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 6px;
+    align-items: center;
+    border-radius: 12px;
+    transition: 0.3s background;
+}
+
+.previsao-item:hover {
+    background: rgb(255, 255, 255, 0.15);
+}
+
+.previsao-item-img {
+    width: 35px;
+    height: 35px;
+}
+
+.mensagem-img {
+    height: 180px;
+    width: fit-content;
+}
+
+.procura-cidade-mensagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 25%;
+}
+
+.procura-cidade-mensagem img {
+    height: 180px;
+    width: fit-content;
+    padding-left: 1rem;
+}
+
+.not-found-cidade-mensagem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 25%;
+}
+
+.not-found-cidade-mensagem img {
+    height: 180px;
+    width: fit-content;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: rgb(219, 47, 61);
+    margin-top: 60px;
+    height: 40%;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 0;
+    color: black;
+}
+
+footer .social a {
+    font-size: 25px;
+    color: pink;
+    border: 2px solid pink;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+footer .social a:hover {
+    transform: scale(1.2) translateY(-5px);
+    background: rgba(226, 110, 43, 0.596);
+}
+
+footer p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+}
+
+@media (max-width:991px) {
+    .footer {
+        padding: 1rem 2%;
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Clima</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="assets/assets/weather/mar.png"> <!--<a href="https://www.flaticon.com/br/icones-gratis/por-do-sol" title="pôr do sol ícones">Pôr do sol ícones criados por Freepik - Flaticon</a>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+</head>
+
+<body>
+    <main class="main-container">
+
+        <header class="input-container">
+            <input class="cidade-input" placeholder="Pesquise a cidade" type="text">
+            <button class="procurar-btn">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </header>
+
+        <section class="clima-info" style="display: none;">
+            <div class="localizacao-data-container">
+                <div class="localizacao">
+                    <img src="icons/location_on_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <h4 class="pais-txt">Brasil</h4>
+                </div>
+                <h5 class="dados-atuais-txt">Sábado, 15 de Fevereiro</h5>
+            </div>
+
+            <div class="clima-sumario-container">
+                <img src="assets/assets/weather/clouds.svg" class="clima-sumario-img">
+                <div class="clima-sumario-info">
+                    <h1 class="temp-txt">29°C</h1>
+                    <h3 class="condition-txt">Nuvens</h3>
+                </div>
+            </div>
+
+            <div class="clima-conditions-container">
+                <div class="condition-item">
+                    <img src="icons/water_drop_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Umidade</h5>
+                        <h5 class="umidade-valor-txt">55%</h5>
+                    </div>
+                </div>
+                <div class="condition-item">
+                    <img src="icons/air_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Vento</h5>
+                        <h5 class="vento-valor-txt">2 M/s</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="previsao-items-container">
+                <div class="previsao-item">
+                    <h5 class="previsao-item-dado">15 fev</h5>
+                    <img src="assets/assets/weather/thunderstorm.svg" class="previsao-item-img">
+                    <h5 class="previsao-item-temp">29°C</h5>
+                </div>
+                <div class="previsao-item">
+                    <h5 class="previsao-item-dado">15 fev</h5>
+                    <img src="assets/assets/weather/thunderstorm.svg" class="previsao-item-img">
+                    <h5 class="previsao-item-temp">29°C</h5>
+                </div>
+                <div class="previsao-item">
+                    <h5 class="previsao-item-dado">15 fev</h5>
+                    <img src="assets/assets/weather/thunderstorm.svg" class="previsao-item-img">
+                    <h5 class="previsao-item-temp">29°C</h5>
+                </div>
+                <div class="previsao-item">
+                    <h5 class="previsao-item-dado">15 fev</h5>
+                    <img src="assets/assets/weather/thunderstorm.svg" class="previsao-item-img">
+                    <h5 class="previsao-item-temp">29°C</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="procura-cidade-mensagem">
+            <img src="assets/assets/message/lupa-juju.png">
+            <div>
+                <h1>Procure a Cidade</h1>
+                <h4 class="regular-txt">
+                    Encontre o clima de qualquer cidade ou país!
+                </h4>
+            </div>
+        </section>
+
+        <section class="not-found-cidade-mensagem" style="display: none;">
+            <img src="assets/assets/message/404-error-juju.png">
+            <div>
+                <h1>Procure a Cidade</h1>
+                <h4 class="regular-txt">
+                    Encontre a previsão do tempo de qualquer cidade ou país!
+                </h4>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/juliana-oliveira-domingos-001409346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/yorforger0703" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:julianadomingos092@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p class="copyright">
+            ©Juliana Domingos | Todos os Direitos Reservados
+        </p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
