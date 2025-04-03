@@ -302,6 +302,23 @@ footer p {
     }
 }
 
+@media (max-width:1370px) {
+    .footer {
+        height: 9rem;
+        position: relative;
+    }
+
+    footer p{
+        margin-top: 1rem;
+    }
+
+    .main-container {
+        margin-top: 4.5rem;
+    }
+
+}
+
+
 @media (max-width:389px) {
     .footer {
         padding: 1rem 2%;
